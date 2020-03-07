@@ -1,21 +1,23 @@
 import 'dart:io';
 
 main() {
-  var x, y, distance = [];
+  var x = [];
+  var y = [];
+  var distance = [];
 
   x.add(inputKeyboard("X1"));
   x.add(inputKeyboard("X2"));
   y.add(inputKeyboard("Y1"));
   y.add(inputKeyboard("Y2"));
 
-  distance.add(calculetedPoints(x[1], x[2], 2));
-  distance.add(calculetedPoints(y[1], y[2], 2));
+  distance.add(calculetedPoints(x[0], x[1], 2));
+  distance.add(calculetedPoints(y[0], y[1], 2));
 
-  squareRoot((distance[1] + distance[2]));
+  squareRoot((distance[0] + distance[1]));
 
 }
 
-calculetedPoints(var pointOne,var pointTwo,int elev){
+int calculetedPoints(var pointOne,var pointTwo,int elev){
     
   var value = (pointOne - pointTwo);
   var mValue = 0;
