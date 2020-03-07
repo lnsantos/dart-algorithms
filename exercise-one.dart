@@ -21,6 +21,7 @@ int calculetedPoints(var pointOne,var pointTwo,int elev){
     
   var value = (pointOne - pointTwo);
   var mValue = 0;
+  
   for(int state = 1;state < elev;state++){
       mValue = value * value;
   }
