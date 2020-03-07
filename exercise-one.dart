@@ -1,24 +1,18 @@
 import 'dart:io';
 
 main() {
-  var _x1 = 0;
-  var _x2 = 0;
-  var _y1 = 0;
-  var _y2 = 0;
+  var x, y, distance = [];
 
-  var xDistance = 0;
-  var yDistance = 0;
+  x.add(inputKeyboard("X1"));
+  x.add(inputKeyboard("X2"));
+  y.add(inputKeyboard("Y1"));
+  y.add(inputKeyboard("Y2"));
 
-  _x1 = inputKeyboard("X1");
-  _x2 = inputKeyboard("X2");
-  _y1 = inputKeyboard("Y1");
-  _y2 = inputKeyboard("Y2");
+  distance.add(calculetedPoints(x[1], x[2], 2));
+  distance.add(calculetedPoints(y[1], y[2], 2));
 
-  xDistance = calculetedPoints(_x1, _x2, 2);
-  yDistance = calculetedPoints(_y1, _y2, 2);
+  squareRoot((distance[1] + distance[2]));
 
-  squareRoot((xDistance + yDistance));
-  
 }
 
 calculetedPoints(var pointOne,var pointTwo,int elev){
